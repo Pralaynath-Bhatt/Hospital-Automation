@@ -10,7 +10,7 @@ public class HomeController {
         return "Welcome Home";
     }
 
-    @GetMapping("/hii")
+    @GetMapping("/ii")
     public String ErrorPage(){
         return "Welcome Error";
     }
