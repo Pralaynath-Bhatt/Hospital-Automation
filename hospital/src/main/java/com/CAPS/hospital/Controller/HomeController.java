@@ -14,4 +14,9 @@ public class HomeController {
     public String ErrorPage(){
         return "Welcome Error";
     }
+
+    @GetMapping("/check")
+    public String CheckPage(){
+        return "Welcome horror";
+    }
 }
