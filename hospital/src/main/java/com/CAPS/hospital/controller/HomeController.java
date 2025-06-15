@@ -1,4 +1,4 @@
-package com.CAPS.hospital.Controller;
+package com.CAPS.hospital.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
