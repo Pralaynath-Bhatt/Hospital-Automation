@@ -17,15 +17,24 @@ public class HospitalApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(StudentDAO theStudentDAO){
 		return runner ->{
-		createStudent(theStudentDAO);
+		//createStudent(theStudentDAO);
+			readStudent(theStudentDAO);
 		};
 	}
 
-	private void createStudent(StudentDAO theStudentDAO) {
-		System.out.println("Creating a new student");
-		Student om=new Student("Om","Puri","ompuri@gmail.com");
-		System.out.println("saving the student");
-		theStudentDAO.Save(om);
-		System.out.println("Student saved");
+	private void readStudent(StudentDAO theStudentDAO) {
+		System.out.println("reading the data of id 1");
+		Student one=theStudentDAO.findById(1);
+		System.out.println("Student found");
+		System.out.println(one.getEmail());
+		System.out.println(one.toString());
 	}
+
+//	private void createStudent(StudentDAO theStudentDAO) {
+//		System.out.println("Creating a new student");
+//		Student om=new Student("hariom","Mishra","hariom@gmail.com");
+//		System.out.println("saving the student");
+//		theStudentDAO.Save(om);
+//		System.out.println("Student saved");
+//	}
 }
