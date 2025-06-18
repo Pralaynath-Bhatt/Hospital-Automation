@@ -18,13 +18,20 @@ public class HospitalApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO theStudentDAO){
 		return runner ->{
 		//createStudent(theStudentDAO);
-			readStudent(theStudentDAO);
+		//	readStudent(theStudentDAO);
+			readStudentPuri(theStudentDAO);
 		};
+	}
+
+	private void readStudentPuri(StudentDAO theStudentDAO) {
+		System.out.println("reading the data of id 1");
+		Student puri=theStudentDAO.findPuri("singh");
+		System.out.println(puri.toString());
 	}
 
 	private void readStudent(StudentDAO theStudentDAO) {
 		System.out.println("reading the data of id 1");
-		Student one=theStudentDAO.findById(1);
+		Student one=theStudentDAO.findById(3);
 		System.out.println("Student found");
 		System.out.println(one.getEmail());
 		System.out.println(one.toString());
