@@ -19,7 +19,7 @@ public class HospitalApplication {
 		return runner ->{
 		//createStudent(theStudentDAO);
 		//	readStudent(theStudentDAO);
-			readStudentPuri(theStudentDAO);
+		//	readStudentPuri(theStudentDAO);
 		};
 	}
 
